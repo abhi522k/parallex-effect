@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My First Design | Abhishek Surse</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header id="header">
+		<a href="#" class="logo">Jungle</a>
+		<ul>
+			<li><a href="#" class="active">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Destination</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+	</header>
+	<section>
+		<h2 id="text"><span>It's time for a new</span><br>Adventure</h2>
+		<img src="img/bird1.png" id="bird1" alt="">
+		<img src="img/bird2.png" id="bird2" alt="">
+		<img src="img/forest.png" id="forest" alt="">
+		<a href="#" id="btn">Explore</a>
+
+		<img src="img/rocks.png" id="rocks" alt="">
+		<img src="img/water.png" id="water" alt="">
+	</section>
+	<div class="sec">
+		<h2>Parallax Scrolling Effects</h2>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+			molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+			numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
+			optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis
+			obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam
+			nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit,
+			tenetur error, harum nesciunt ipsum debitis quas aliquid. <br><br>Reprehenderit,
+			quia. Quo neque error repudiandae fuga? Ipsa laudantium molestias eos
+			sapiente officiis modi at sunt excepturi expedita sint? Sed quibusdam
+			recusandae alias error harum maxime adipisci amet laborum. Perspiciatis
+			minima nesciunt dolorem! Officiis iure rerum voluptates a cumque velit
+			quibusdam sed amet tempora. Sit laborum ab, eius fugit doloribus tenetur
+			fugiat, temporibus enim commodi iusto libero magni deleniti quod quam
+			consequuntur! Commodi minima excepturi repudiandae velit hic maxime
+			doloremque. <br><br>Quaerat provident commodi consectetur veniam similique ad
+			earum omnis ipsum saepe, voluptas, hic voluptates pariatur est explicabo
+			fugiat, dolorum eligendi quam cupiditate excepturi mollitia maiores labore
+			suscipit quas? Nulla, placeat. Voluptatem quaerat non architecto ab laudantium
+			modi minima sunt esse temporibus sint culpa, recusandae aliquam numquam
+			totam ratione voluptas quod exercitationem fuga. Possimus quis earum veniam
+		quasi aliquam eligendi, placeat qui corporis!</p>
+	</div>
+
+	<script>
+		let text = document.getElementById('text');
+		let bird1 = document.getElementById('bird1');
+		let bird2 = document.getElementById('bird2');
+		let btn = document.getElementById('btn');
+		let rocks = document.getElementById('rocks');
+		let forest = document.getElementById('forest');
+		let water = document.getElementById('water');
+		let header = document.getElementById('header');
+		
+		window.addEventListener('scroll', function(){
+			let value = window.scrollY;
+
+			text.style.top = 50 + value * -0.5 + '%';
+			bird1.style.top = value * -1.5 + 'px';
+			bird1.style.left = value * 2 + 'px';
+			bird2.style.top = value * -1.5 + 'px';
+			bird2.style.left = value * -2 + 'px';
+			btn.style.marginTop = value * 1.5 + 'px';
+			rocks.style.top = value * -0.12 + 'px';
+			forest.style.top = value * 0.25 + 'px';
+			header.style.top = value * 0.5 + 'px';
+		})
+	</script>
+</body>
+</html>
